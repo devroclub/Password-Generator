@@ -72,11 +72,15 @@ export default class Home extends React.Component {
     };
 
     handleClickUltra = () => {
-        this.setState({ password: PasswordManager.generate(true) });
+        let password = PasswordManager.generate(true);
+        this.setState({ password: password });
+        this.setState({ shareURL: window.location.origin.toString() + ShareManager.getLink(password) });
     };
 
     handleClickSecure = () => {
-        this.setState({ password: PasswordManager.generate(false) });
+        let password = PasswordManager.generate(false);
+        this.setState({ password: password });
+        this.setState({ shareURL: window.location.origin.toString() + ShareManager.getLink(password) });
     };
 
 }
