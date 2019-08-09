@@ -4,7 +4,9 @@ import {BrowserRouter} from 'react-router-dom';
 import Home from "./Home";
 import Route from "react-router-dom/es/Route";
 import About from "./About";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 function App() {
   return (
@@ -46,7 +48,7 @@ function App() {
               }}/>
 
               <div className="footer-bottom">
-                  <span className="text-center">© 2019 Password Generator</span>
+                  <span className="text-center">© 2019 Password Generator | <a className="github" href="https://github.com/devroclub/Password-Generator" target="_blank">Managed on GitHub</a></span>
               </div>
           </div>
       </BrowserRouter>
